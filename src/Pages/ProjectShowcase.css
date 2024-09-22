@@ -1,0 +1,52 @@
+.project-showcase {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.project-detail {
+  flex: 3;
+  margin-right: 20px;
+}
+
+.recent-projects {
+  flex: 1;
+}
+
+.category-filter {
+  margin-bottom: 10px;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.pagination button {
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+  color: white;
+}
