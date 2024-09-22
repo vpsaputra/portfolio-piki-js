@@ -14,6 +14,10 @@ export default {
         ibm: ["IBM", "sans-serif"],
         leaguespartan: ["LeagueSpartan", "sans-serif"],
       },
+      listStyleType: {
+        square: "square",
+        circle: "circle",
+      },
     },
   },
   plugins: [require("@tailwindcss/forms")],

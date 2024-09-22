@@ -1,34 +1,34 @@
 import React from "react";
 
-import About from "./components/ABOUT.JSX";
 import Contact from "./components/Contact";
-import Experience from "./components/experience";
+import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
-import Project from "./components/Project";
+import Project from "./components/Project/Project";
 import PageNumber from "./components/PageNumber";
 import Marquee from "./components/Marquee";
+import Home from "./components/Home";
+import HomePage from "./Pages/HomePage";
+import { createRoot } from "react-dom/client";
+import ProjectShowcase from "./Pages/ProjectShowcase";
 
-const contents = [Header, About, Experience, Project, Contact];
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
-// const generatePages = (props) => {
-//   return
-// };
 const App = () => {
   return (
-    <div className="bg-dark-primary font-poppins">
-      {/* generatePages({contents}) */}
-      <Header />
-      {/* <PageNumber /> */}
-      <About />
-      <Experience />
-      <Project />
-      <Contact />
-      <Nav />
-      <Footer />
-      <Marquee></Marquee>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<HomePage />}></Route>
+
+        <Route exact path="/projects" Component={ProjectShowcase}></Route>
+        <Route
+          path="projects/:id"
+          element={<ProjectShowcase />}
+          title="Projects"
+        />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

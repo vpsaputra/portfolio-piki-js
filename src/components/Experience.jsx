@@ -1,4 +1,5 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 
 const educations = [
   {
@@ -19,58 +20,59 @@ const work_experience = [
     title: "RETY Ponsel & Reload",
     year: "Juni 2021 - November 2022",
     position: "Customer Service dan Administrator",
-    detail: `Tanggungjawab : 
-    \n 1. Memantau dan memastikan transaksi agen berjalan dengan baik dan lancar'
-    \n 2. Troubleshooting perangkat komputer dan jaringan server
-    \n 3. Menyusun laporan stok barang dan saldo server mingguan dan bulanan`,
+    detail: `Responsibilities:
+
+1. Monitoring and ensuring agent transactions run smoothly through the OtomaX application
+1. Troubleshooting computer and server network issues
+1. Compiling weekly and monthly inventory and server balance reports`,
   },
   {
     title: "PT PLN PERSERO AREA PADANG",
     year: 2016,
-    position: "Magang",
-    detail: `Proyek magang : Pembuatan Aplikasi Web "Pemetaan Penerangan Jalan Umum (PJU)
-   \n menggunakan Google Maps API" `,
+    position: "Internship",
+    detail: `Internship Project: Development of a Web Application for "Mapping Public Street Lighting (PJU) using Google Maps API"`,
   },
 ];
 const Experience = () => {
   return (
     <div className="section " id="experience">
-      <h2 className=" section-title">Pendidikan Dan Pengalaman Kerja</h2>
+      <h2 className=" section-title">Education and Work Experience</h2>
       <div className="container mx-2">
-        <div className="flex flex-col lg:flex-row w-full space-x-2">
-          <div className="flex-1 portfolio-items">
-            <h2 className="text-5xl font-bold bold chapter uppercase font-leaguespartan">
-              {" "}
+        <div className="flex flex-col lg:flex-row w-full md:space-x-2">
+          <div className="flex-1 portfolio-items ">
+            <h2 className="text-5xl font-bold bold chapter uppercase  bg-gray-100 p-2">
               Pendidikan
             </h2>
             {educations.map((education, index) => {
               const { title, major, subtitle, text } = education;
               return (
                 <div key={index} className="font-serif">
-                  <p className="list-items-subtitle">{title}</p>
+                  <p className="list-items-subtitle  text-cyan-500">{title}</p>
                   <h5>Jurusan : {major}</h5>
                   <h5>Tahun: {subtitle}</h5>
-                  {text != null && <h5>{text}</h5>}
+                  {text != null && (
+                    <h5>
+                      {" "}
+                      <ReactMarkdown>{text}</ReactMarkdown>{" "}
+                    </h5>
+                  )}
                 </div>
               );
             })}
           </div>
           <div className="flex-1  portfolio-items">
-            <h2 className="text-5xl font-bold bold chapter uppercase font-leaguespartan">
-              {" "}
+            <h2 className="text-5xl font-bold bold chapter uppercase  bg-gray-100 p-2">
               Pengalaman Kerja
             </h2>
             {work_experience.map((work_experience, index) => {
               const { title, year, position, detail } = work_experience;
               return (
-                <div key={index} className="font-serif">
-                  <p className="list-items-subtitle">{title}</p>
-                  <h5>Tahun : {year}</h5>
-                  <h5>Posisi : {position}</h5>
+                <div key={index}>
+                  <p className="list-items-subtitle   text-cyan-500">{title}</p>
+                  <h5>Year : {year}</h5>
+                  <h5>Position : {position}</h5>
                   {detail != null && (
-                    <h5 className={detail.includes("\n") ? "line-break" : ""}>
-                      {detail}
-                    </h5>
+                    <ReactMarkdown className="mb-8">{detail}</ReactMarkdown>
                   )}
                 </div>
               );

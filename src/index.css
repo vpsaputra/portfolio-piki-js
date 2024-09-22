@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Poppins";
-  src: url("../poppins.woff2") format("woff");
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
   font-style: normal;
   /* font-weight: normal; */
 }
@@ -38,8 +38,8 @@
   --teks-sekunder: #808388;
 
   font-family: "Poppins", sans-serif;
-  line-height: 1.5;
-  font-weight: 800;
+  line-height: 1.2;
+  font-weight: 500;
 
   color-scheme: light dark;
 
@@ -59,29 +59,56 @@
 
 h1 {
   text-align: center;
+  font-size: 1.3em;
 }
 h2,
 h3,
 h4,
 h5 {
-  color: var(--teks-sekunder);
+  color: #8a8d6a;
+  /* margin-block: 0.5em; */
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h5 {
+  @apply text-sm md:text-base;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 1em;
+}
+
+a {
+  word-wrap: break-word;
 }
 
 .btn {
-  background: linear-gradient(
+  /* background: linear-gradient(
     92.23deg,
     #ff56f6 21.43%,
     #b936ee 50.63%,
     #3bace2 100%,
     #1cbabe 117.04%
-  );
+  ); */
+  border: #033738 2px solid;
+  background-color: #000000;
+}
+.social:hover,
+.btn:hover,
+.active:hover {
+  background-color: #1cbabe;
 }
 
 .active {
-  border-radius: 100%;
+  border-radius: 4px;
   background-color: #074764;
   color: aliceblue;
 }
+/* bottom navbar(mobile view) */
 .navbar .active {
   /* clip-path: polygon(0px 0%, 100% 0%, 100% 70%, 50% 100%, 0% 70%); */
   border: #fff 1px;
@@ -91,7 +118,7 @@ h5 {
 
 a {
   color: var(--teks-sekunder);
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .polygons {
@@ -113,7 +140,7 @@ a {
   color: aliceblue;
 }
 .text-hero {
-  font-size: 7vw;
+  font-size: 5vw;
   font-weight: bold;
 }
 .bg-dark-secondary {
@@ -124,27 +151,17 @@ a {
   margin: 2rem;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  @apply py-16  px-4 min-h-screen flex items-center shadow-slate-950 shadow-inner;
-
-  /* background: linear-gradient(92.23deg, #6c366e 21.43%, #453164 117.04%); */
-  /* background: linear-gradient(180deg, #909bbe 21.43%, #1b3dd4 117.04%); */
-  /* background-color: #bbc2c5; */
-
-  /* clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 90% 100%); */
-  /* background-clip: border-box; */
-  /* border: 4em solid dimgray; */
-
-  /* background: url(./assets/overlay_stars.svg); */
+  @apply py-8  px-2 min-h-fit flex shadow-slate-950 shadow-inner;
 }
 
 .section-title {
   font-size: xx-large;
-  font-weight: 900 !important;
+  font-weight: 700 !important;
   color: var(--primary-color);
   padding: 0.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  align-self: center;
   /* border-radius: 60% 40% 60% 40%; */
   background-color: #c89b6f;
   color: var(--primary-color);
@@ -158,7 +175,6 @@ a {
     0px 2px 4px 0px #201101, 0px 2px 4px 0px #020617;
   /* 
   font-size: xx-large;
-  font-weight: 900 !important;
   color: #fafafa;
   padding: 0.5rem;
   border-radius: 0px 0.5rem;
@@ -179,6 +195,33 @@ a {
   border-right: #aaa 1px solid;
 } */
 
+.grid-wrapper {
+  grid-template-areas:
+    "sd sd sd"
+    "main main main"
+    "ft ft ft";
+}
+
+@media only screen and (min-width: 768px) {
+  .grid-wrapper {
+    grid-template-areas:
+      "sd main main"
+      "sd ft ft";
+  }
+}
+
+.grid-1 {
+  grid-area: sd;
+}
+
+.grid-2 {
+  grid-area: main;
+}
+
+.grid-3 {
+  grid-area: ft;
+  align-self: self-end;
+}
 .page-number {
   display: flex;
   position: absolute;
@@ -232,19 +275,28 @@ a {
   /* color: var(--accent-color); */
   box-shadow: 2px 2px 2px rgba(207, 182, 182, 0.342);
 }
+.social {
+  padding: 4px;
+}
+
+.social-wrapper > div {
+  display: flex;
+  margin-left: 2px;
+  margin-right: auto;
+  width: 100%;
+}
 
 .chapter {
   font-size: 22px;
   /* margin-bottom: 8px; */
-  font-weight: 700;
   /* color: #000000; */
   /* color: var(--text-color); */
 }
 
 .list-items-subtitle {
-  /* margin-bottom: 15px; */
+  margin-top: 0.5rem;
   font-size: 1.2em;
-  color: #ff6651;
+  /* color: #ff6651; */
 }
 
 .bg-block {
@@ -263,31 +315,21 @@ a {
 .container-hero {
   max-height: 50vh;
 }
-/* 
-a {
-  font-weight: 500;
-  color: #646cff;
+
+ul a {
+  color: white;
   text-decoration: inherit;
+  padding: 5px 2px 5px 2px;
+  border-bottom: 3px solid white;
 }
-a:hover {
-  color: #535bf2;
-} */
-/* 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
-/* 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-} */
+ul a:hover {
+  border-bottom: 3px solid #ffcb39;
+  color: #ffcb39;
+}
 
 .tag {
-  background-color: #32323238;
+  background-color: #323232b2;
+  color: aliceblue;
   padding: 0.1rem 0.2rem;
   border-radius: 4px;
 }
@@ -297,18 +339,34 @@ h1 {
   min-width: 100%;
   max-height: 180px;
 }
-button {
+button,
+.button-group a {
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-weight: 800;
-  font-family: inherit;
+  border: 2px solid transparent;
+  padding: 0.4em 0.4em;
+  font-weight: 500;
   background-color: var(--teks-primer);
   cursor: pointer;
   transition: border-color 0.25s;
+  color: black;
 }
-button:hover {
-  border-color: #646cff;
+
+/* disable all a tag withhout "href" tag inside button-group */
+.button-group a:not([href]) {
+  opacity: 50%;
+  pointer-events: none;
+}
+
+select,
+option {
+  background-color: var(--bg-sekunder);
+}
+button:hover,
+.custom-button:hover:not(.btn-disabled) {
+  background-color: #c7a583;
+  color: black;
+  transform: scale(1.05);
+  border: white 2px solid;
 }
 button:focus,
 button:focus-visible {
@@ -317,15 +375,35 @@ button:focus-visible {
 
 .line-break {
   display: block;
-  white-space: pre-line;
-  line-height: 0.9em;
+  line-height: 1em;
 }
 
-a:hover {
+/* a:hover {
   color: #747bff;
-}
+} */
 
 .FMT__container {
-  @apply max-w-[300px] md:max-w-max;
-  background-color: #074764;
+  @apply md:max-w-max;
+}
+
+.FMT__container svg {
+  width: 42px;
+  height: 42px;
+  margin-block: 8px;
+}
+
+.markdown-content h1,
+h2,
+p {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.25em;
+}
+
+.markdown-content h1,
+h2 {
+  color: var(--accent-color);
+}
+.markdown-content {
+  @apply md:px-9;
+  text-align: justify;
 }

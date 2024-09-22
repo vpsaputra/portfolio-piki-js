@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.17",
+    "@lottiefiles/react-lottie-player": "^3.5.3",
     "@next/font": "^13.4.1",
     "@tailwindcss/forms": "^0.5.3",
     "framer-motion": "^10.12.9",
@@ -20,6 +21,8 @@
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.5.2",
     "react-icons": "^4.8.0",
+    "react-markdown": "^9.0.1",
+    "react-router-dom": "^6.22.3",
     "react-scroll": "^1.8.9"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-scroll";
+import logo from "../assets/brand-logo.png";
 
 import {
   BiArchive,
@@ -18,64 +18,46 @@ import {
   BsLinkedin,
 } from "react-icons/bs";
 
+const scrollToSection = (sectionName = "") => {
+  document.getElementById(sectionName)?.scrollIntoView({ behavior: "smooth" });
+};
+
 const Nav = () => {
   return (
     <section>
       <nav
-        className="navbar flex flex-row w-full bg-wave justify-between items-center absolute  top-0 p-3 md:py-0"
+        className="navbar flex w-full bg-wave justify-between items-center fixed  top-0 p-3 md:py-0 z-50"
         id="navbarNav11"
       >
-        <BsBriefcase />
-        <ul className=" hidden md:flex flex-row  gap-3 ">
-          <Link
-            to="home"
-            activeClass="active"
-            smooth="true"
-            spy={true}
-            className="cursor-pointer w-[64px] h-[64px] flex items-center justify-center"
+        <img
+          src={logo}
+          alt="brand-logo"
+          width={72}
+          className=" cursor-pointer"
+        />
+        <ul className="hidden  md:flex  w-[400px] flex-col md:flex-row  gap-3 items-center ">
+          <a
+            href="#home"
+            onClick={scrollToSection("header")}
+            className="flex items-center"
           >
             Home
-          </Link>
-
-          <Link
-            to="about"
-            activeClass="active"
-            smooth="true"
-            spy={true}
-            className="cursor-pointer w-[64px] h-[64px] flex items-center justify-center"
-          >
+          </a>
+          <a href="#about" onClick={scrollToSection("about")}>
             About
-          </Link>
-          <Link
-            to="experience"
-            activeClass="active"
-            smooth="true"
-            spy={true}
-            className="cursor-pointer w-[64px] h-[64px] flex items-center justify-center"
-          >
-            Services
-          </Link>
-          <Link
-            to="project"
-            activeClass="active"
-            smooth="true"
-            spy={true}
-            className="cursor-pointer w-[64px] h-[64px] flex items-center justify-center"
-          >
+          </a>
+          <a href="#experience" onClick={scrollToSection("experience")}>
+            Experience
+          </a>
+          <a href="#project" onClick={scrollToSection("project")}>
             Projects
-          </Link>
-          <Link
-            to="contact"
-            activeClass="active"
-            smooth="true"
-            spy={true}
-            className="cursor-pointer w-[64px] h-[64px] flex items-center justify-center"
-          >
+          </a>
+          <a href="#contact" onClick={scrollToSection("contact")}>
             Contact
-          </Link>
+          </a>
         </ul>
         <a
-          className="btn px-3  py-1 rounded-full flex items-center gap-1"
+          className="active px-3  py-1 rounded-full flex items-center gap-1 "
           href="https://id.linkedin.com/vpsaputra"
           target="_blank"
         >
@@ -84,58 +66,52 @@ const Nav = () => {
         </a>
       </nav>
 
-      {/* Bottom Navigation */}
-      <nav className="fixed bottom-2 lg:bottom w-full overflow-hidden z-50">
+      {/* Bottom Navigation (For mobiles) */}
+      <nav className="fixed bottom-2 lg:bottom w-full overflow-hidden z-500 md:hidden">
         <div className="mx-auto">
           <div
-            className="w-full bg-black/20 h-[96px] backdrop-blur-2x1 rounded-3xl mx-auto px-5
-         max-w-[360px] flex justify-between items-center text-2xl"
+            className="w-full bg-black/20 h-[84px] backdrop-blur-2x1 rounded-3xl mx-auto px-2
+         max-w-[300px] flex justify-between items-center text-2xl mobile-navbar"
           >
-            <Link
-              to="home"
-              activeClass="active"
+            <a
+              href="#home"
               smooth="true"
-              spy={true}
               className="cursor-pointer w-[64px] h-[64px] flex items-center justify-center"
             >
               <BiHomeAlt />
-            </Link>
-            <Link
-              to="about"
-              activeClass="active"
+            </a>
+
+            <a
+              href="#about"
               smooth="true"
-              spy={true}
               className="cursor-pointer w-[64px] h-[64px] flex items-center justify-center"
             >
               <BiUser />
-            </Link>
-            <Link
-              to="experience"
-              activeClass="active"
+            </a>
+
+            <a
+              href="#experience"
               smooth="true"
-              spy={true}
               className="cursor-pointer w-[64px] h-[64px] flex items-center justify-center"
             >
               <BiAward />
-            </Link>
-            <Link
-              to="project"
-              activeClass="active"
+            </a>
+
+            <a
+              href="#project"
               smooth="true"
-              spy={true}
               className="cursor-pointer w-[64px] h-[64px] flex items-center justify-center"
             >
               <BiBriefcase />
-            </Link>
-            <Link
-              to="contact"
-              activeClass="active"
+            </a>
+
+            <a
+              href="#contact"
               smooth="true"
-              spy={true}
               className="cursor-pointer w-[64px] h-[64px] flex items-center justify-center"
             >
               <BiClipboard />
-            </Link>
+            </a>
           </div>
         </div>
       </nav>
