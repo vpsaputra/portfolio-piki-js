@@ -1,0 +1,41 @@
+[
+  {
+    "id": 0,
+    "title": "AppLab Website (Mockup)",
+    "category": "Web Development",
+    "dateCreated": "2024-08-20",
+    "type": "Personal Project",
+    "stack": "ReactJS, SASS",
+    "thumbnail": "AppLab/Thumbnail.webp",
+    "content": "# Project Description: AppLab\n\n## Overview\nAppLab is a web application developed using **ReactJS** and **SASS**, designed as a personal project to enhance my skills in converting web designs into functional web applications. This project serves as a hands-on training exercise in slicing and implementing web designs while maintaining a high standard of code quality and user experience.\n\n## Objectives\nThe primary goal of AppLab is to bridge the gap between static web designs and dynamic web applications. By utilizing ReactJS and SASS, I aim to create a responsive and interactive user interface that adheres to modern web standards.\n\n## Technology Stack\n\n### ReactJS\nReactJS is a powerful JavaScript library that allows for the creation of dynamic and responsive user interfaces. Here’s why I chose React for this project:\n\n- **Component-Based Architecture**: React’s component-based structure promotes reusability and maintainability, making it easier to manage complex UIs.\n- **Virtual DOM**: React’s efficient rendering using the Virtual DOM enhances performance, ensuring a smooth user experience even with dynamic content.\n- **Rich Ecosystem**: React boasts a vibrant ecosystem, providing access to numerous libraries and tools that can accelerate development.\n\n### SASS\nSASS (Syntactically Awesome Style Sheets) is a preprocessor that extends CSS with powerful features. Here’s why SASS was chosen for styling AppLab:\n\n- **Nesting**: SASS allows for nested rules, making the stylesheet cleaner and more organized, which is particularly useful for large projects.\n- **Variables and Mixins**: The ability to use variables and mixins enables better consistency and reusability in styling, reducing redundancy in the CSS code.\n- **Modular Approach**: SASS encourages a modular approach to styling, allowing for easier maintenance and scalability as the project grows.\n\n## Design and Development Process\nThe design process for AppLab began with creating wireframes and mockups, using dummy text (Lorem Ipsum) to simulate content. This approach allowed me to focus on layout, responsiveness, and user interactions without being distracted by actual content.\n\n## Conclusion\nAppLab is not just a project; it’s a stepping stone in my journey to mastering web development. By leveraging the strengths of ReactJS and SASS, I am building a solid foundation for future projects while honing my skills in transforming design concepts into fully functional web applications."
+  },
+  {
+    "id": 1,
+    "title": "Kalisani Coffee Website ",
+    "category": "Web Development",
+    "dateCreated": "2024-05-01",
+    "type": "Final Assignment",
+    "stack": "Plain HTML, CSS, JavaScript",
+    "thumbnail": "KalisaniCoffee/Screenshot.webp",
+    "url": "https://vpsaputra.github.io/kopi-kuy/",
+    "repoUrl": "https://github.com/vpsaputra/kopi-kuy",
+    "content": "# Kalisani Coffee\n\nWelcome to **Kalisani Coffee**—a sleek and modern coffee shop website designed as a final project for the course *'Belajar Membuat Website Untuk Pemula'* from XperTrainer. Built using plain HTML, Bootstrap, and enhanced with AOS (Animate On Scroll) for smooth animations, this website offers a user-friendly experience with a focus on elegance and functionality.\n\n## Key Features:\n\n- **Responsive Design:** Crafted with Bootstrap, the site ensures a seamless experience across various devices, from desktops to smartphones.\n- **Direct WhatsApp Ordering:** Easily place your coffee orders via WhatsApp with a convenient button integrated into the site.\n- **Interactive Navigation:** Find your way with an embedded Google Map, providing clear directions and location details.\n- **Shop Feature:** Explore our featured and signature menu items in the 'Shop' section, showcasing our finest coffee creations.\n\nExplore Kalisani Coffee and enjoy the blend of functionality and style, tailored to bring a delightful coffee experience right to your fingertips."
+  },
+  {
+    "id": 2,
+    "title": "Public Street Lighting Mapping Using Google Maps API",
+    "category": "Web Development",
+    "dateCreated": "2016-04-15",
+    "thumbnail": "PJU/Mockup.jpg",
+    "type": "Intern Project",
+    "stack": "Plain HTML, CSS, JavaScript",
+    "content": "# Project Description: Public Street Lighting Mapping Using Google Maps API\n\nThis project, titled \"Public Street Lighting Mapping Using Google Maps API,\" was developed during my internship at PT PLN Persero Area Padang, Indonesia's national electricity company. The main objectives of this application include:\n\n- Assisting clients in collecting data on electricity usage for public street lighting. However, the scope extends beyond just street lights; it also encompasses traffic lights, park lighting, and other public facilities.\n- The final output of the application is a mapping of light points integrated with Google Maps (Version 3 at that time), along with a table displaying the total number of lights, lights per region, and the total power consumption.\n- The light points are categorized into those installed by PLN and those illegally installed by the community.\n\n## Use of Google Maps API\n\nA key feature of this project is the integration of the Google Maps API. This allowed for the visualization of light points on an interactive map, providing users with a geographical context for the data. The API facilitated the following functionalities:\n\n- **Dynamic Mapping**: The application uses the API to plot the locations of street lights, enabling users to visualize the distribution of lighting across different regions.\n- **Custom Markers**: By leveraging the API, I was able to create custom markers to distinguish between different types of lights. This customization enhances user experience by providing clear visual cues about the types of lighting in each area.\n\n## Infobox Library\n\nTo further enhance the user interface, I utilized the Infobox library for customizing marker displays on Google Maps. Key features include:\n\n- **Marker Customization**: The markers are visually differentiated based on the type of light (PLN-installed vs. illegally installed by the community). This allows for quick identification of each light point.\n- **Detailed Information Display**: When users click on a marker, an Infobox appears, providing detailed information about the specific light point, including installation type and power consumption. This feature improves user engagement and provides essential data at a glance.\n\nThe application was developed using PHP, MySQL, jQuery, and Ajax for dynamic data processing."
+  },
+  {
+    "id": 3,
+    "title": "Prototype of Lecturer Locker Monitoring Based on Internet Of Things (IOT)",
+    "category": "Embedded System, Android Development",
+    "dateCreated": "2019-07-30",
+    "content": "## To be updated! \n![Image](https://via.placeholder.com/150)\n\n."
+  }
+]

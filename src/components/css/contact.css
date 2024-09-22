@@ -1,0 +1,15 @@
+.section {
+  /* background: linear-gradient(155deg, #3e3162 21.43%, #6d366e); */
+
+  background: linear-gradient(310deg, #1f282d 21.43%, #242434);
+  box-shadow: white 4px;
+}
+
+/* .section:where(:nth-child(2), :nth-child(4)) {
+  background: linear-gradient(310deg, #1f282d 21.43%, #242434);
+  box-shadow: white 4px;
+}
+
+.section:where(:nth-child(3), :nth-child(5)) {
+  background: linear-gradient(310deg, #1f282d 21.43%, #232c35);
+} */
