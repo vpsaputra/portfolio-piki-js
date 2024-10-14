@@ -8,13 +8,6 @@
   font-family: "Poppins";
   @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
   font-style: normal;
-  /* font-weight: normal; */
-}
-@font-face {
-  font-family: "IBM Plex Sans";
-  src: url("../public/IBMPlexSans-Bold.ttf") format("ttf");
-  font-style: normal;
-  /* font-weight: normal; */
 }
 
 @font-face {
@@ -334,6 +327,11 @@ ul a:hover {
   border-radius: 4px;
 }
 
+.card-container:hover {
+  box-shadow: 0px 0px 30px 1px rgba(204, 0, 255, 0.3);
+  transform: scale(1.02);
+  box-shadow: 0px 0px 30px 1px rgba(204, 0, 255, 0.3);
+}
 .card-container img {
   background-color: dimgrey;
   min-width: 100%;

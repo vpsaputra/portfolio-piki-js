@@ -10,7 +10,7 @@ const educations = [
   },
   {
     title: "SMA N 1 Gunung Toar",
-    major: "Jurusan : IPS",
+    major: "Ilmu Pengetahuan Sosial",
     subtitle: "2011 - 2013",
   },
 ];
@@ -41,7 +41,7 @@ const Experience = () => {
         <div className="flex flex-col lg:flex-row w-full md:space-x-2">
           <div className="flex-1 portfolio-items ">
             <h2 className="text-5xl font-bold bold chapter uppercase  bg-gray-100 p-2">
-              Pendidikan
+              Education
             </h2>
             {educations.map((education, index) => {
               const { title, major, subtitle, text } = education;
@@ -62,7 +62,7 @@ const Experience = () => {
           </div>
           <div className="flex-1  portfolio-items">
             <h2 className="text-5xl font-bold bold chapter uppercase  bg-gray-100 p-2">
-              Pengalaman Kerja
+              Work Experience
             </h2>
             {work_experience.map((work_experience, index) => {
               const { title, year, position, detail } = work_experience;

@@ -37,10 +37,13 @@ const Header = () => {
           className=" grid-1 transparent-hero justify-self-center"
         />
         <div className=" w-full grid-2 flex flex-col justify-center gap-2 border p-7">
-          <div className="">
+          <div className="flex flex-row items-center justify-center">
+            <div class="w-full border-t border-gray-300 my-4 divider"></div>
+
             <h1 className="text-hero background-clip-text items-start font-leaguespartan  ">
               WHAT I DO?
             </h1>
+            <div class="w-full border-t border-gray-300 my-4 divider"></div>
           </div>
 
           <h5 className="text-justify justify-self-end mb-4 text-cyan-500">

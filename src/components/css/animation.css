@@ -1,0 +1,47 @@
+@keyframes move-balls {
+  0% {
+    transform: translateX(-160px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes stagger {
+  to {
+    transform: translateX(-160px);
+    opacity: 0;
+  }
+}
+
+@keyframes scale-x {
+  from {
+    width: 30%;
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  .abg a {
+    animation: stagger 1s alternate;
+    animation-timeline: view();
+    animation-range: contain;
+  }
+
+  .divider {
+    animation: scale-x 1s alternate;
+    animation-timeline: view();
+    animation-range: contain;
+  }
+}
+.abg a:nth-child(4) {
+  animation-delay: 200ms;
+}
+.abg a:nth-child(1) {
+  animation-delay: 50ms;
+}
+.abg a:nth-child(2) {
+  animation-delay: 100ms;
+}
+.abg a:nth-child(3) {
+  animation-delay: 150ms;
+}

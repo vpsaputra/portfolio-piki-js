@@ -48,7 +48,7 @@ const Contact = () => {
 
         {/* contact info */}
 
-        <div className="flex-row social-wrapper w-full mx-3 ">
+        <div className="flex-row social-wrapper w-full mx-3 p-3">
           <h5 className=" text-cyan-500">Contact Me On:</h5>
           {jsonData.map((item, index) => (
             <div key={index} className="social border h-10 items-center gap-2">

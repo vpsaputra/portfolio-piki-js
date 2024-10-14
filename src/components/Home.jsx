@@ -1,5 +1,6 @@
 import React from "react";
 import "./home.css";
+import "@components/css/animation.css";
 import astronaut from "@assets/astronaut.svg";
 import earth from "../assets/earth.svg";
 import moon from "../assets/moon.svg";

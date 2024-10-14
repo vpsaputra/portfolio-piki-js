@@ -43,7 +43,7 @@ const ProjectCard = ({
           target="_blank"
           rel="noopener noreferrer"
           title="View Repository on Github"
-          className="custom-button btn-disabled "
+          className="custom-button"
         >
           <FaGithub className="" />
         </a>
